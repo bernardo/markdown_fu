@@ -50,14 +50,16 @@ module MarkdownFu
     #
     def markdown(field_name, html_field_name = nil)
       html_field_name ||= "#{field_name.to_s}_html".to_sym
-      
+
       before_save do |record|
         unless record.send(field_name).blank?
           record.send "#{html_field_name}=", MarkdownFu.translate(record.send(field_name))
         end
       end
-      
+
     end
   end
 
 end
+
+ActiveRecord::Base.send :include, MarkdownFu

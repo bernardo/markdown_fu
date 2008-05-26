@@ -1,8 +1,8 @@
 begin
-  require 'bluecloth'
+  require 'maruku' 
 rescue LoadError
   begin
-    require 'maruku'
+    require 'bluecloth'
   rescue LoadError
     raise "markdown_fu plugin requires BlueCloth or Maruku to be installed." 
   end

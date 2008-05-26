@@ -4,7 +4,7 @@
 you to write using an easy-to-read, easy-to-write plain text format, then 
 convert it to structurally valid XHTML (or HTML)."
 
-Markdown was created by [John Gruber][1]
+Markdown was created by {John Gruber}[http://daringfireball.net/projects/markdown/]
 
 MarkdownFu is a Rails (ActiveRecord) plugin which will convert attributes from 
 Markdown into html and store the result in the <tt>[attribute_name]_html</tt> attribute. 
@@ -28,12 +28,9 @@ to subclasses using Single Table Inheritance.
 
 == Credits
 
-* Originally based on [textilizefu][2] by adelcambre.
+* Originally based on textilizefu[http://github.com/adelcambre/textilizefu/] by adelcambre.
 * Francesc Esplugas Marti - Initial implementation
 * Bernardo de Padua - Rewritten to support multiple markdown attributes per
   model and added tests.
 
 Copyright (c) 2008 Francesc Esplugas Marti, Bernardo de Padua released under the MIT license
-
-[1]: http://daringfireball.net/projects/markdown/
-[2]: http://github.com/adelcambre/textilizefu/

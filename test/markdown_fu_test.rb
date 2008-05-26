@@ -1,7 +1,5 @@
 require 'test/unit'
-
 require 'rubygems'
-gem 'activerecord', '>= 1.15.4.7794'
 require 'active_record'
 require 'mocha'
 require "#{File.dirname(__FILE__)}/../init"
@@ -36,7 +34,6 @@ class PostAndComment < Post
   markdown :summary
 end
 
-
 class MarkdownFuTest < Test::Unit::TestCase
 
   def setup
@@ -46,7 +43,7 @@ class MarkdownFuTest < Test::Unit::TestCase
   def teardown
     teardown_db
   end
-   
+
   def test_should_convert_all_markdown_fields_defined_in_the_class_and_super_classes
     post = PostAndComment.new(:body=>'test body', :comment=>'test comment', :summary=>'test summary')
     MarkdownFu.expects(:translate).with('test comment').returns("comment converted")
@@ -57,15 +54,15 @@ class MarkdownFuTest < Test::Unit::TestCase
     assert_equal "comment converted",  post.generated_comment
     assert_equal "body converted",  post.body_html
   end
-  
+
   def test_should_not_convert_blank_fields
-    post = PostAndComment.new(:body=>'', :comment=>nil)
+    post = PostAndComment.new(:body => '', :comment => nil)
     MarkdownFu.expects(:translate).never
     post.save
   end
-  
-  def test_translate_should_be_working 
+
+  def test_translate_should_be_working
     assert_equal "<p>teste</p>", MarkdownFu.translate("teste")
   end
-  
+
 end

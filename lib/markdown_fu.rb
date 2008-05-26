@@ -1,5 +1,5 @@
 begin
-  require 'maruku' 
+  require 'maruku'
 rescue LoadError
   begin
     require 'bluecloth'
@@ -24,7 +24,7 @@ module MarkdownFu
       elsif Object.const_defined?(:BlueCloth)
         BlueCloth.new(str).to_html
       else
-        raise "markdown_fu plugin requires BlueCloth or Maruku to be installed." 
+        raise "markdown_fu plugin requires BlueCloth or Maruku to be installed."
       end
     end
   end

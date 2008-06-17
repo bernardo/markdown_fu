@@ -1,4 +1,4 @@
-= MarkdownFu
+== MarkdownFu
 
 "Markdown is a text-to-HTML conversion tool for web writers. Markdown allows 
 you to write using an easy-to-read, easy-to-write plain text format, then 
@@ -28,9 +28,9 @@ to subclasses using Single Table Inheritance.
 
 == Credits
 
-* Originally based on textilizefu[http://github.com/adelcambre/textilizefu/] by adelcambre.
-* Francesc Esplugas Marti - Initial implementation
-* Bernardo de Padua - Rewritten to support multiple markdown attributes per
+- Originally based on textilizefu[http://github.com/adelcambre/textilizefu/] by adelcambre.
+- Francesc Esplugas Marti - Initial implementation
+- Bernardo de Padua - Rewritten to support multiple markdown attributes per
   model and added tests.
 
 Copyright (c) 2008 Francesc Esplugas Marti, Bernardo de Padua released under the MIT license

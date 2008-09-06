@@ -4,7 +4,7 @@ rescue LoadError
   begin
     require 'bluecloth'
   rescue LoadError
-    raise "markdown_fu plugin requires BlueCloth or Maruku to be installed." 
+    nil # if we throw an error here rails will not be able to install the gem automatically
   end
 end
 
